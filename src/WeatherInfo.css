@@ -1,0 +1,90 @@
+.WeatherInfo {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 25px;
+    margin-top: 20px;
+  }
+  
+  .WeatherInfo h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+  }
+  
+  .WeatherInfo h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin: 5px 0 10px;
+  }
+  
+  .date-time {
+    font-size: 1.1rem;
+    color: #70757a;
+    margin-bottom: 5px;
+  }
+  
+  .weather-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5c9ce5;
+  }
+  
+  .weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .temperature-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px 15px;
+    border-radius: 10px;
+    width: 180px;
+  }
+  
+  .metric-label {
+    font-size: 0.9rem;
+    color: #70757a;
+  }
+  
+  .metric-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .weather-details {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .weather-metrics {
+      width: 100%;
+    }
+    
+    .metric {
+      width: 100%;
+    }
+  }
+  

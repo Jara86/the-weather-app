@@ -1,16 +1,39 @@
 .App {
-  font-family: "Roboto", sans-serif;
   max-width: 800px;
-  margin: 60px auto;
+  margin: 30px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5a6275;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  background-color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 30px;
+  padding: 0 15px;
 }
 
-body {
-  background-color: #f9f9f9;
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  color: #5a6275;
 }
+
+@media (max-width: 768px) {
+  .App {
+    margin: 15px auto;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+

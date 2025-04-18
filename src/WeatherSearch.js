@@ -12,7 +12,7 @@ export default function WeatherSearch({ onWeatherData }) {
     setError(null);
     
     const apiKey = "3980a7c8f2a782241a093131b099f993";
-    // Using the apiUrl directly in the fetch call to avoid the ESLint error
+   
     fetch(`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`)
       .then(response => {
         if (!response.ok) {
@@ -23,7 +23,7 @@ export default function WeatherSearch({ onWeatherData }) {
       .then(data => {
         setLoading(false);
         
-        // Format the data to match your WeatherDisplay component
+     
         const formattedData = {
           city: data.city,
           temperature: data.temperature.current,
@@ -51,7 +51,7 @@ export default function WeatherSearch({ onWeatherData }) {
     const ampm = hours >= 12 ? "PM" : "AM";
     
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour "0" should be "12"
+    hours = hours ? hours : 12; 
     
     return `${day} ${hours}:${minutes} ${ampm}`;
   }

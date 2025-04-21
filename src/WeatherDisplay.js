@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "../styles/WeatherDisplay.css";
+import PropTypes from "prop-types";
 
 export default function WeatherDisplay({ data }) {
   const [forecast, setForecast] = useState(null);
@@ -54,3 +55,13 @@ export default function WeatherDisplay({ data }) {
     </div>
   );
 }
+
+WeatherDisplay.propTypes = {
+  data: PropTypes.shape({
+    coordinates: PropTypes.shape({
+      lat: PropTypes.number.isRequired,
+      lon: PropTypes.number.isRequired,
+    }).isRequired,
+    city: PropTypes.string.isRequired,
+  }).isRequired,
+};

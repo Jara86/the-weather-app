@@ -23,6 +23,7 @@ export default function WeatherDisplay({ data }) {
           setForecast(response.data.daily);
           setLoading(false);
         } catch (err) {
+          console.error("Error fetching forecast data:", err);
           setError("Could not load forecast data");
           setLoading(false);
         }
@@ -40,9 +41,9 @@ export default function WeatherDisplay({ data }) {
       
       {loading && (
         <div className="text-center my-4">
-          <div className="spinner-border spinner-border-sm text-primary" role="status">
+          <output className="spinner-border spinner-border-sm text-primary">
             <span className="visually-hidden">Loading forecast...</span>
-          </div>
+          </output>
           <span className="ms-2">Loading forecast...</span>
         </div>
       )}

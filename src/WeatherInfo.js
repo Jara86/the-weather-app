@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/WeatherInfo.css";
+import PropTypes from "prop-types";
 
 export default function WeatherInfo({ data }) {
   const formattedDate = formatDate(data.date);
@@ -12,10 +13,24 @@ export default function WeatherInfo({ data }) {
     const ampm = hours >= 12 ? 'PM' : 'AM';
     
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    hours = hours || 12; // the hour '0' should be '12'
     
-    return `${day}, ${hours}:${minutes} ${ampm}`;
+    return `${day} ${hours}:${minutes} ${ampm}`;
   }
+  
+  WeatherInfo.propTypes = {
+    data: PropTypes.shape({
+      date: PropTypes.instanceOf(Date).isRequired,
+      city: PropTypes.string.isRequired,
+      country: PropTypes.string,
+      icon: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      temperature: PropTypes.number.isRequired,
+      feelsLike: PropTypes.number.isRequired,
+      humidity: PropTypes.number.isRequired,
+      wind: PropTypes.number.isRequired,
+    }).isRequired,
+  };
 
   return (
     <div className="WeatherInfo">

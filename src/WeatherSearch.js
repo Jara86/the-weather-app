@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaSearch, FaLocationArrow } from "react-icons/fa";
 import "../styles/WeatherSearch.css";
+import PropTypes from "prop-types";
+WeatherSearch.propTypes = {
+  onWeatherData: PropTypes.func.isRequired,
+  onLoading: PropTypes.func.isRequired,
+  onError: PropTypes.func.isRequired,
+  defaultCity: PropTypes.string,
+};
 
 export default function WeatherSearch({ onWeatherData, onLoading, onError, defaultCity }) {
   const [city, setCity] = useState(defaultCity || "");

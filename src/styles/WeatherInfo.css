@@ -1,0 +1,122 @@
+.WeatherInfo {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .location-info {
+    margin-bottom: 20px;
+  }
+  
+  .location-info h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+  }
+  
+  .location-info h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin: 5px 0 10px;
+  }
+  
+  .date-time {
+    font-size: 1.1rem;
+    color: #70757a;
+  }
+  
+  .current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .weather-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5c9ce5;
+    margin-top: 5px;
+  }
+  
+  .temperature-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+  }
+  
+  .temperature-unit {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  
+  .weather-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px 15px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .detail-label {
+    font-size: 0.9rem;
+    color: #70757a;
+    margin-bottom: 5px;
+  }
+  
+  .detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .current-weather {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .weather-details {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .detail-item {
+      margin: 0;
+    }
+  }
+  

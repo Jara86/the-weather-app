@@ -33,7 +33,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="app-title">Jara's Weather App</h1>
+        <h1 className="app-title">Weather App</h1>
         <WeatherSearch 
           onWeatherData={handleWeatherData} 
           onLoading={handleLoading}

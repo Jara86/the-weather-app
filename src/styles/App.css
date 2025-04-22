@@ -2,13 +2,17 @@
     max-width: 800px;
     margin: 30px auto;
     font-family: 'Poppins', sans-serif;
+    background: rgba(18, 2, 32, 0.556);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 50px;
   }
   
   .app-title {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #5a6275;
+    color: #b1bfe1;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }

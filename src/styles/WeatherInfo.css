@@ -1,12 +1,13 @@
-.WeatherInfo {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 25px;
-    margin-bottom: 20px;
-  }
+.WeatherInfo, .WeatherForecast {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
   
   .location-info {
     margin-bottom: 20px;

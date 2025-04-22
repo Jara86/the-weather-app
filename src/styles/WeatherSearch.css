@@ -1,66 +1,88 @@
 .WeatherSearch {
-    margin-bottom: 25px;
-  }
-  
-  .search-form {
-    width: 100%;
-  }
-  
+  margin-bottom: 25px;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  border-radius: 30px;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.search-input:focus {
+  border-color: #5c9ce5;
+  box-shadow: 0 0 0 3px #5c9ce540;
+  outline: none;
+}
+
+/* More specific selectors for buttons */
+.WeatherSearch .btn-search, 
+.WeatherSearch .btn-location {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.WeatherSearch .btn-search {
+  background-color: #65a2e740; 
+}
+
+.WeatherSearch .btn-location {
+  background-color: #65a2e740; 
+}
+
+.WeatherSearch .btn-search:hover, 
+.WeatherSearch .btn-location:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.WeatherSearch .btn-search:hover {
+  background-color: #d6dee340;  
+}
+
+.WeatherSearch .btn-location:hover {
+  background-color: #d6dee340; 
+}
+
+/* Add active state for better user feedback */
+.WeatherSearch .btn-search:active,
+.WeatherSearch .btn-location:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
   .input-group {
-    display: flex;
-    gap: 10px;
+    flex-wrap: nowrap;
   }
   
   .search-input {
-    border-radius: 30px;
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    padding: 10px 15px;
   }
   
-  .search-input:focus {
-    border-color: #5c9ce5;
-    box-shadow: 0 0 0 3px rgba(92, 156, 229, 0.25);
+  .WeatherSearch .btn-search, 
+  .WeatherSearch .btn-location {
+    width: 42px;
+    height: 42px;
   }
-  
-  .btn-search, .btn-location {
-    border-radius: 50%;
-    width: 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #5c9ce5;
-    border: none;
-    color: white;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-location {
-    background-color: #6c757d;
-  }
-  
-  .btn-search:hover, .btn-location:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn-search:hover {
-    background-color: #4a8ad0;
-  }
-  
-  .btn-location:hover {
-    background-color: #5a6268;
-  }
-  
-  @media (max-width: 576px) {
-    .input-group {
-      flex-direction: column;
-    }}
-  
-  
-  
-  
-  
+}
